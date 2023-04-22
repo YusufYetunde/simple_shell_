@@ -11,7 +11,12 @@
 #include <sys/stat.h>
 #include <limits.h>
 #include <fcntl.h>
+#include <ctype.h>
 #include <errno.h>
 
+int _interpreter(char *s);
+int is_interactive(void);
+int is_delimiter(char c);
+int has_alphabets(char *s);
 
 #endif
