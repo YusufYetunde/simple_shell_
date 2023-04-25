@@ -29,9 +29,6 @@ typedef struct infot
 	int status;
 	char *history;
 	char *alias;
-	list_t *env;
-	char **argv;
-	int argc;
 	char **environ;
 }info_t;
 
@@ -56,5 +53,12 @@ char *find_str_in_list(list_t *head, const char *str);
 int my_setenv(info_t *info);
 int my_unsetenv(info_t *info);
 int populate_env_list(info_t *info);
+
+void _eputs(char *);
+int _eputchar(char);
+int _putfd(char c, int fd);
+int _putsfd(char *str, int fd);
+
+
 
 #endif
