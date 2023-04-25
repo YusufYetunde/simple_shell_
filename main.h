@@ -14,6 +14,8 @@
 #include <ctype.h>
 #include <errno.h>
 
+#define CONVERT_UNSIGNED 2
+
 typedef struct lists
 {
 	int *num;
@@ -30,6 +32,8 @@ typedef struct infot
 	char *history;
 	char *alias;
 	char **environ;
+	char *fname;
+	int line_count;
 }info_t;
 
 int _interpreter(char *s);
@@ -59,6 +63,11 @@ int _eputchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 
+int _strconvert(char *);
+void print_error(info_t *, char *);
+int print_d(int, int);
+char *convert_number(long int, int, int);
+void remove_comments(char *);
 
 
 #endif
