@@ -36,6 +36,10 @@ typedef struct infot
 	int line_count;
 	char *buffer;
 	int buffer_type;
+	char *path;
+	char **cmd_buf;
+	list_t *env;
+	int readfd;
 }info_t;
 
 int _interpreter(char *s);
@@ -78,6 +82,11 @@ int input_buffer(info_t *info, char **buffer, size_t *x);
 int get_input(info_t *info, char **command);
 int read_buffer(int fd, char *buffer, size_t *i);
 void sigintHandler(int sig_num);
+
+void clear_info(info_t *);
+void set_info(info_t *, char **);
+void free_info(info_t *, int);
+
 
 
 #endif
