@@ -40,6 +40,7 @@ typedef struct infot
 	char **cmd_buf;
 	list_t *env;
 	int readfd;
+	int histcount;
 }info_t;
 
 int _interpreter(char *s);
@@ -87,6 +88,11 @@ void clear_info(info_t *);
 void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
+char *get_history_file(info_t *info);
+int write_history(info_t *info);
+int read_history(info_t *info);
+int build_history_list(info_t *info, char *buf, int linecount);
+int renumber_history(info_t *info);
 
 
 #endif
