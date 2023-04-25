@@ -94,5 +94,12 @@ int read_history(info_t *info);
 int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
+list_t *add_node(list_t **head, const char *str, int num);
+void add_node_end(list_t **head, char *str);
+void print_list_str(list_t *head);
+int delete_node_at_index(list_t **head, unsigned int index);
+void free_list(list_t **head);
+
+
 
 #endif
