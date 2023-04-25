@@ -69,5 +69,10 @@ int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
 
+char* my_strncpy(char* dest, const char* src, size_t n);
+char* my_strncat(char* dest, const char* src, size_t n);
+
+
+
 
 #endif
