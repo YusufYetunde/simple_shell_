@@ -99,3 +99,14 @@ int read_buffer(int fd, char *buffer, size_t *i)
 	*i = r;
 	return (r);
 }
+/**
+ * sigintHandler - blocks ctrl-C
+ * @sig_num: the signal number
+ *
+ * Return: void
+ */
+void sigintHandler(int sig_num)
+{
+	printf("\n$ ");
+	fflush(stdout);
+}

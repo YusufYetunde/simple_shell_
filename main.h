@@ -77,7 +77,7 @@ char* my_strncat(char* dest, const char* src, size_t n);
 int input_buffer(info_t *info, char **buffer, size_t *x);
 int get_input(info_t *info, char **command);
 int read_buffer(int fd, char *buffer, size_t *i);
-
+void sigintHandler(int sig_num);
 
 
 #endif
