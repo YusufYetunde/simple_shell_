@@ -34,6 +34,8 @@ typedef struct infot
 	char **environ;
 	char *fname;
 	int line_count;
+	char *buffer;
+	int buffer_type;
 }info_t;
 
 int _interpreter(char *s);
@@ -72,6 +74,9 @@ void remove_comments(char *);
 char* my_strncpy(char* dest, const char* src, size_t n);
 char* my_strncat(char* dest, const char* src, size_t n);
 
+int input_buffer(info_t *info, char **buffer, size_t *x);
+int get_input(info_t *info, char **command);
+int read_buffer(int fd, char *buffer, size_t *i);
 
 
 
