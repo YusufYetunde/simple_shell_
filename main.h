@@ -100,6 +100,13 @@ void print_list_str(list_t *head);
 int delete_node_at_index(list_t **head, unsigned int index);
 void free_list(list_t **head);
 
+int _free(void **ptr);
 
+int _pathbuilt(info_t *info, char *path);
+char find_path(info_t *info, char *pathstr, char *index);
+
+char *setMem(char *ptr, char b, unsigned int num);
+void freestr(char **str);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 #endif
