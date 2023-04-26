@@ -109,4 +109,11 @@ char *setMem(char *ptr, char b, unsigned int num);
 void freestr(char **str);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
+int _strlen(char *s);
+int _strcmp(char *s1, char *s2);
+char *starts(const char *haystack, const char *subs);
+char *_strcat(char *dest, char *src);
+
+
+
 #endif
