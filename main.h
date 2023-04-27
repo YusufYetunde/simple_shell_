@@ -114,6 +114,19 @@ int _strcmp(char *s1, char *s2);
 char *starts(const char *haystack, const char *subs);
 char *_strcat(char *dest, char *src);
 
+char *_strcpy(char *dest, char *src);
+char *_strdup(const char *str);
+void shellputs(char *str);
+int shellputchar(char c);
 
+char *_strtok(char *str, const char *delim);
+char **splitstr(char *str, char *delim);
+char *_strchr(const char *s, int c);
+
+size_t listLen(const list_t *head);
+char **strlist(list_t *head);
+size_t print_list(const list_t *head);
+list_t *strNode(list_t *head, char *pre, char c);
+ssize_t strindexOf(list_t *head, list_t *node);
 
 #endif
